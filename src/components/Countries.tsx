@@ -92,19 +92,52 @@ export default function Countries({ dict }: { dict: any }) {
           </div>
         )}
 
-        {/* Video Section */}
-        <div className="mt-24 max-w-5xl mx-auto">
-          <div className="rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white/50 ring-1 ring-black/5 bg-gray-900">
-            <video 
-              controls
-              playsInline
-              preload="none"
-              poster="/Budeya/images/video-poster.png"
-              className="w-full h-auto aspect-video object-cover"
-              src="/Budeya/videos/promo-video.mp4"
-            >
-              Your browser does not support the video tag.
-            </video>
+        {/* Media Gallery Section */}
+        <div className="mt-24">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">{dict.countries.media?.title || "Life & Work"}</h2>
+            <div className="w-24 h-1 bg-primary mx-auto rounded-full"></div>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+            {/* Existing Promo Video */}
+            <div className="md:col-span-2 rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white/50 ring-1 ring-black/5 bg-gray-900">
+              <video 
+                controls playsInline preload="none"
+                poster="/Budeya/images/video-poster.png"
+                className="w-full h-auto aspect-video object-cover"
+                src="/Budeya/videos/promo-video.mp4"
+              />
+            </div>
+            
+            {/* New Video 1 */}
+            <div className="rounded-[2rem] overflow-hidden shadow-xl border-4 border-white/50 ring-1 ring-black/5 bg-gray-900 aspect-video">
+              <video 
+                controls playsInline preload="none"
+                poster="/Budeya/images/video-poster-2.jpg"
+                className="w-full h-full object-cover"
+                src="/Budeya/videos/video-2.mp4"
+              />
+            </div>
+            
+            {/* New Video 2 */}
+            <div className="rounded-[2rem] overflow-hidden shadow-xl border-4 border-white/50 ring-1 ring-black/5 bg-gray-900 aspect-video">
+              <video 
+                controls playsInline preload="none"
+                poster="/Budeya/images/video-poster-3.jpg"
+                className="w-full h-full object-cover"
+                src="/Budeya/videos/video-3.mp4"
+              />
+            </div>
+
+            {/* New Photo */}
+            <div className="md:col-span-2 rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white/50 ring-1 ring-black/5 relative group mt-2">
+               <img 
+                 src="/Budeya/images/gallery-1.jpg"
+                 alt="Agency Life"
+                 className="w-full max-h-[600px] object-cover group-hover:scale-105 transition-transform duration-700"
+               />
+            </div>
           </div>
         </div>
 
