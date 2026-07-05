@@ -124,7 +124,7 @@ export default function Countries({ dict }: { dict: any }) {
             <div className="rounded-[2rem] overflow-hidden shadow-xl border-4 border-white/50 ring-1 ring-black/5 bg-gray-900 aspect-video">
               <video 
                 controls playsInline preload="none"
-                poster="/Budeya/images/video-poster-3.png"
+                poster="/Budeya/images/video-poster-3.jpeg"
                 className="w-full h-full object-cover"
                 src="/Budeya/videos/video-3.mp4"
               />
