@@ -2,12 +2,16 @@
 
 import React, { useState } from 'react';
 import { ChevronDown, Globe, Phone, Mail, Send, MessageCircle, MessageSquare } from 'lucide-react';
+import { useRouter, usePathname } from 'next/navigation';
 
 export default function Header({ dict, currentLang }: { dict: any, currentLang: string }) {
   const [isLangOpen, setIsLangOpen] = useState(false);
+  const router = useRouter();
+  const pathname = usePathname();
 
   const changeLanguage = (lang: string) => {
-    window.location.replace(`/${lang}`);
+    const basePath = pathname.startsWith('/Budeya') ? '/Budeya' : '';
+    window.location.href = `${basePath}/${lang}`;
   };
 
   return (

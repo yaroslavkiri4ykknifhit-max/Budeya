@@ -1,8 +1,11 @@
 "use client";
 
 import { useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 
 export default function RootRedirect() {
+  const router = useRouter();
+
   useEffect(() => {
     const detectAndRedirect = async () => {
       let targetLang = 'en';
@@ -33,7 +36,7 @@ export default function RootRedirect() {
         if (browserLang === 'ur') targetLang = 'ur';
       }
 
-      window.location.replace(`/${targetLang}`);
+      window.location.href = `${window.location.pathname.startsWith('/Budeya') ? '/Budeya' : ''}/${targetLang}`;
     };
 
     detectAndRedirect();
