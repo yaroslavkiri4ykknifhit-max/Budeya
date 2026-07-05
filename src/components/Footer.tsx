@@ -9,7 +9,7 @@ export default function Footer({ dict }: { dict: any }) {
           <div className="lg:col-span-2">
             <div className="flex items-center gap-2 mb-6">
               <div className="bg-primary text-white p-2 rounded-xl">
-                <img src="/logo.svg" alt="BUDEYA Logo" className="h-6 w-auto brightness-0 invert" />
+                <img src="./logo.svg" alt="BUDEYA Logo" className="h-6 w-auto brightness-0 invert" />
               </div>
               <div>
                 <h2 className="font-bold text-xl leading-tight text-gray-900">{dict.hero.brand}</h2>

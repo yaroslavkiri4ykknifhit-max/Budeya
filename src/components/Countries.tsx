@@ -65,14 +65,14 @@ export default function Countries({ dict }: { dict: any }) {
 
         {/* Video Section */}
         <div className="mt-24 max-w-5xl mx-auto">
-          <div className="rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white/50 ring-1 ring-black/5 bg-black">
+          <div className="rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white/50 ring-1 ring-black/5 bg-gray-900">
             <video 
-              src="/videos/promo-video.mp4" 
-              controls 
+              controls
               playsInline
-              className="w-full aspect-video object-contain"
-            >
-              Your browser does not support the video tag.
+              preload="metadata"
+              className="w-full h-auto aspect-video object-cover"
+              src="./videos/promo-video.mp4" 
+            >  Your browser does not support the video tag.
             </video>
           </div>
         </div>
