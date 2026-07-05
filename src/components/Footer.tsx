@@ -22,7 +22,7 @@ export default function Footer({ dict }: { dict: any }) {
           </div>
 
           <div>
-            <h4 className="font-bold text-gray-900 mb-6 uppercase tracking-wider text-sm">{dict.nav.services}</h4>
+            <h3 className="font-bold text-gray-900 mb-6 uppercase tracking-wider text-sm">{dict.nav.services}</h3>
             <ul className="space-y-4">
               <li><a href="#" className="text-gray-500 hover:text-primary transition-colors">{dict.services.b2b.title}</a></li>
               <li><a href="#" className="text-gray-500 hover:text-primary transition-colors">{dict.services.b2c.title}</a></li>
@@ -31,7 +31,7 @@ export default function Footer({ dict }: { dict: any }) {
           </div>
 
           <div>
-            <h4 className="font-bold text-gray-900 mb-6 uppercase tracking-wider text-sm">{dict.footer.contacts}</h4>
+            <h3 className="font-bold text-gray-900 mb-6 uppercase tracking-wider text-sm">{dict.footer.contacts}</h3>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <MapPin className="text-primary mt-1 flex-shrink-0" size={18} />
@@ -52,11 +52,11 @@ export default function Footer({ dict }: { dict: any }) {
         </div>
 
         <div className="border-t border-gray-100 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-gray-400 text-sm">
-            © {new Date().getFullYear()} {dict.hero.brand}. {dict.footer.copyright}
+          <p className="text-gray-500 text-sm">
+            &copy; {new Date().getFullYear()} {dict.footer.org}
           </p>
-          <div className="flex gap-6">
-            <a href="#" className="text-gray-400 hover:text-primary transition-colors text-sm">{dict.footer.privacy}</a>
+          <div className="flex gap-4">
+            <a href="#" className="text-gray-500 hover:text-primary transition-colors text-sm">{dict.footer.privacy}</a>
           </div>
         </div>
       </div>

@@ -6,7 +6,7 @@ export default function Services({ dict }: { dict: any }) {
     <section className="w-full bg-light-gray py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <span className="text-primary font-bold tracking-wider uppercase text-sm mb-2 block">-- {dict.nav.services}</span>
+          <span className="text-red-600 font-bold tracking-wider uppercase text-sm mb-2 block">-- {dict.nav.services}</span>
           <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">{dict.services.title}</h2>
           <p className="text-gray-600 max-w-2xl mx-auto text-lg">{dict.services.desc}</p>
         </div>

@@ -35,7 +35,7 @@ export default function Stages({ dict }: { dict: any }) {
                   {step.title}
                 </h3>
               </div>
-              <span className="text-gray-300 font-bold text-lg mb-6 block">
+              <span className="text-gray-400 font-bold text-lg mb-6 block">
                 0{index + 1}
               </span>
               

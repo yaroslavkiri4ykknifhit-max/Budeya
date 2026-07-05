@@ -69,7 +69,8 @@ export default function Countries({ dict }: { dict: any }) {
             <video 
               controls
               playsInline
-              preload="metadata"
+              preload="none"
+              poster="./images/hero.jpg"
               className="w-full h-auto aspect-video object-cover"
               src="./videos/promo-video.mp4" 
             >  Your browser does not support the video tag.

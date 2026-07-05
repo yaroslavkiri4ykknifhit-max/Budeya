@@ -21,7 +21,7 @@ export default function About({ dict }: { dict: any }) {
           </div>
 
           <div className="flex-1">
-            <span className="text-primary font-bold tracking-wider uppercase text-sm mb-2 block">-- {dict.nav.advantages}</span>
+            <span className="text-red-600 font-bold tracking-wider uppercase text-sm mb-2 block">-- {dict.nav.advantages}</span>
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">{dict.about.title}</h2>
             
             <p className="text-gray-600 mb-6 text-lg">
@@ -38,7 +38,7 @@ export default function About({ dict }: { dict: any }) {
                     {idx + 1}
                   </div>
                   <div>
-                    <h4 className="text-xl font-bold text-gray-900 mb-2">{feature.title}</h4>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">{feature.title}</h3>
                     <p className="text-gray-600">{feature.desc}</p>
                   </div>
                 </div>
