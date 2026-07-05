@@ -33,22 +33,8 @@
           "Livestock breeders",
           "Milkmaids",
           "Vegetable growers",
-          "Gardeners (including greenhouses and parks)"
-        ]
-      },
-      {
-        "icon": "📦",
-        "name": "Warehouse and Production",
-        "jobs": [
-          "Laborers",
-          "Loaders",
-          "Stackers",
-          "Packers",
-          "Labelers",
-          "Assistants",
-          "Order pickers",
-          "Conveyor workers (with training)",
-          "Markers"
+          "Gardeners",
+          "Vegetable sorters"
         ]
       },
       {
@@ -59,11 +45,30 @@
           "Plasterers",
           "Painters",
           "Facade workers",
-          "Electric welders",
-          "Gas welders"
+          "Welders",
+          "Concrete workers",
+          "Landscaping & Paving"
+        ]
+      },
+      {
+        "icon": "🏭",
+        "name": "Manufacturing & Trades",
+        "jobs": [
+          "Seamstress",
+          "Mining",
+          "Chemical industry",
+          "Carpenter",
+          "Joiner",
+          "Woodworking machine operator",
+          "Sawmill helpers"
         ]
       }
-    ]
+    ],
+    "videoRequirement": "Video confirmation of skills is required for each specialty. Every worker must send a high-quality video demonstrating their work directly from their workplace or production site.",
+    "masseuse": {
+      "title": "Masseuses (Spa & Wellness)",
+      "desc": "We are actively recruiting professional female masseuses for top-tier spas and wellness centers in Belarus. Candidates must provide video confirmation of their skills."
+    }
   },
   "services": {
     "title": "Our Services",
@@ -73,7 +78,7 @@
       "subtitle": "(B2B Partnership)",
       "list": [
         "Official cooperation agreement",
-        "Obtaining quotas and permits from Belarusian employers",
+        "Obtaining permits from Belarusian employers",
         "Processing work invitations for your candidates",
         "Assistance in obtaining work visas",
         "Airport pickup and transfer",

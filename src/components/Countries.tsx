@@ -60,6 +60,35 @@ export default function Countries({ dict }: { dict: any }) {
                 </div>
               ))}
             </div>
+
+            {dict.professions.videoRequirement && (
+              <div className="mt-8 bg-blue-50 border-l-4 border-blue-500 p-6 rounded-r-xl shadow-sm">
+                <p className="text-blue-900 font-medium text-lg flex items-start sm:items-center">
+                  <span className="mr-3 text-2xl block mt-1 sm:mt-0">📹</span>
+                  <span>{dict.professions.videoRequirement}</span>
+                </p>
+              </div>
+            )}
+
+            {dict.professions.masseuse && (
+              <div className="mt-16 bg-gradient-to-r from-pink-50 to-rose-50 rounded-3xl p-8 sm:p-12 shadow-lg border border-pink-100 flex flex-col md:flex-row items-center gap-10">
+                <div className="flex-1">
+                  <h3 className="text-3xl font-bold text-gray-900 mb-4">{dict.professions.masseuse.title}</h3>
+                  <p className="text-xl text-gray-700 leading-relaxed">
+                    {dict.professions.masseuse.desc}
+                  </p>
+                </div>
+                <div className="w-full md:w-1/3 shrink-0">
+                  <div className="relative rounded-2xl overflow-hidden shadow-xl border-4 border-white transform rotate-2 hover:rotate-0 transition-transform duration-500 aspect-[3/4]">
+                    <img 
+                      src="./images/masseuse.jpg" 
+                      alt="Professional Masseuse" 
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         )}
 

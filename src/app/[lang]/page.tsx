@@ -57,7 +57,7 @@ export default async function LangHome({ params }: { params: Promise<{ lang: str
         <FAQ dict={dict} />
         <ContactBanner dict={dict} />
       </main>
-      <Footer dict={dict} />
+      <Footer dict={dict} lang={lang} />
     </div>
   );
 }
