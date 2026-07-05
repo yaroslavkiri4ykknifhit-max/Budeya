@@ -124,7 +124,7 @@
   },
   "about": {
     "title": "Why Choose Us?",
-    "desc1": "We understand how important it is for partner agencies to be confident in the safety of their candidates, and for job seekers to get a reliable job. Our mission is to make the relocation and employment process as transparent and fast as possible.",
+    "desc1": "We understand how important it is for partner agencies to be confident in the safety of their candidates, and for job seekers to get a reliable job. Our mission is to make the relocation and employment process as transparent and fast as possible. We process documents strictly in accordance with the laws of the Republic of Belarus, catering directly to candidates from Nigeria, including Lagos and Abuja.",
     "desc2": "We handle all bureaucratic procedures with the Department of Citizenship and Migration in Belarus.",
     "button": "Get a Consultation",
     "features": [
@@ -179,5 +179,13 @@
     "hours": "Daily from 09.00 to 18.00",
     "copyright": "All rights reserved.",
     "privacy": "Privacy Policy"
+  },
+  "meta": {
+    "title": "BUDEYA | Legal Employment in Belarus for Nigeria (Lagos, Abuja)",
+    "description": "A reliable recruitment partner offering legal employment in Belarus for candidates from Nigeria. Full visa support from Lagos, Abuja, and Kano."
+  },
+  "breadcrumbs": {
+    "home": "Home",
+    "employment": "Legal Employment in Belarus"
   }
 }
