@@ -103,15 +103,21 @@ export default function Countries({ dict }: { dict: any }) {
 
         {/* Media Gallery Section */}
         <div className="mt-24 w-full overflow-hidden pb-12">
-          <div className="text-center mb-12 px-4">
+          <div className="text-center mb-10 px-4">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">{dict.countries.media?.title || "Life & Work"}</h2>
             <div className="w-24 h-1 bg-primary mx-auto rounded-full"></div>
+          </div>
+          
+          {/* Swipe Hint for Mobile */}
+          <div className="flex md:hidden items-center justify-end px-6 mb-4 text-primary/80 animate-pulse">
+            <span className="text-sm font-bold uppercase tracking-wider mr-2">{dict.countries.media?.swipeHint || "Swipe to view more"}</span>
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
           </div>
           
           <div className="flex overflow-x-auto gap-4 sm:gap-6 pb-8 px-4 sm:px-6 lg:px-8 snap-x snap-mandatory hide-scrollbar mx-auto" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
             
             {/* Main Promo Video */}
-            <div className="snap-center shrink-0 w-[85vw] sm:w-[600px] md:w-[800px] rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white/50 ring-1 ring-black/5 bg-gray-900">
+            <div className="snap-center shrink-0 w-[80vw] sm:w-[600px] md:w-[800px] rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white/50 ring-1 ring-black/5 bg-gray-900">
               <video controls playsInline preload="none" poster="/Budeya/images/video-poster.png" className="w-full h-auto aspect-video object-cover" src="/Budeya/videos/promo-video.mp4" />
             </div>
 
@@ -126,14 +132,14 @@ export default function Countries({ dict }: { dict: any }) {
               { id: 8, src: '/Budeya/videos/video-8.mov', poster: '/Budeya/images/video-poster-8.jpg' },
               { id: 9, src: '/Budeya/videos/video-9.mp4', poster: '/Budeya/images/video-poster-9.jpg' },
             ].map((v) => (
-              <div key={v.id} className="snap-center shrink-0 w-[75vw] sm:w-[400px] md:w-[500px] rounded-[2rem] overflow-hidden shadow-xl border-4 border-white/50 ring-1 ring-black/5 bg-gray-900 aspect-video">
+              <div key={v.id} className="snap-center shrink-0 w-[70vw] sm:w-[400px] md:w-[500px] rounded-[2rem] overflow-hidden shadow-xl border-4 border-white/50 ring-1 ring-black/5 bg-gray-900 aspect-video">
                 <video controls playsInline preload="none" poster={v.poster} className="w-full h-full object-cover" src={v.src} />
               </div>
             ))}
 
             {/* All photos */}
             {Array.from({ length: 10 }, (_, i) => i + 1).map((num) => (
-              <div key={`photo-${num}`} className="snap-center shrink-0 w-[75vw] sm:w-[400px] md:w-[500px] rounded-[2rem] overflow-hidden shadow-xl border-4 border-white/50 ring-1 ring-black/5 relative group aspect-video">
+              <div key={`photo-${num}`} className="snap-center shrink-0 w-[70vw] sm:w-[400px] md:w-[500px] rounded-[2rem] overflow-hidden shadow-xl border-4 border-white/50 ring-1 ring-black/5 relative group aspect-video">
                  <img src={`/Budeya/images/gallery-${num}.jpg`} alt={`Agency Life ${num}`} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
               </div>
             ))}
