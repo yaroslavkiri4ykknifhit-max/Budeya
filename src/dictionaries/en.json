@@ -4,14 +4,24 @@
     "countries": "Target Countries",
     "services": "Services",
     "faq": "FAQ",
-    "requestCall": "Request a Call"
+    "contact": "Contact",
+    "requestCall": "Free Consultation"
   },
   "hero": {
     "agency": "Recruitment Agency",
     "brand": "«BUDEYA»",
-    "title": "Legal Employment in Belarus",
-    "desc": "We guarantee 100% legal employment without risks or hidden fees. We handle all paperwork, work visas, and local adaptation — providing complete, end-to-end employment solutions within 30-40 days.",
-    "button": "Our Services"
+    "title": "Get a Legal Job in Belarus",
+    "desc": "BUDEYA helps foreign workers with legal employment in Belarus, work permit support, visa document assistance, and relocation coordination. The document process usually takes 30-40 days after the required documents are submitted.",
+    "button": "Apply Now — Free Consultation"
+  },
+  "trust": {
+    "items": [
+      "Registered Belarusian company",
+      "Legal employment process",
+      "Work permit support",
+      "Visa document assistance",
+      "Office in Belarus"
+    ]
   },
   "countries": {
     "title": "Countries We Recruit From",
@@ -134,21 +144,22 @@
   },
   "about": {
     "title": "Why Choose Us?",
-    "desc1": "We understand how important it is for partner agencies to be confident in the safety of their candidates, and for job seekers to get a reliable job. Our mission is to make the relocation and employment process as transparent and fast as possible. We process documents strictly in accordance with the laws of the Republic of Belarus, catering directly to candidates from Nigeria, including Lagos and Abuja.",
+    "desc1": "We understand how important it is for partner agencies and job seekers to follow a clear, legal process. Our mission is to make relocation and employment support transparent, organized, and compliant with the laws of the Republic of Belarus for candidates from Nigeria, including Lagos and Abuja.",
     "desc2": "We handle all bureaucratic procedures with the Department of Citizenship and Migration in Belarus.",
-    "button": "Get a Consultation",
+    "button": "Apply Now — Free Consultation",
+    "badgeTitle": "Legal",
     "features": [
       {
-        "title": "100% Legal",
-        "desc": "All documents are processed in strict accordance with the Law of the Republic of Belarus. No grey schemes."
+        "title": "Legal Process",
+        "desc": "Documents are prepared in accordance with the laws of the Republic of Belarus. No grey schemes."
       },
       {
-        "title": "Time Saving",
-        "desc": "We take care of all the paperwork and interactions with migration services. You just receive the ready invitation."
+        "title": "Document Coordination",
+        "desc": "We coordinate paperwork and interactions with migration services, including work invitation preparation."
       },
       {
-        "title": "Risk Protection",
-        "desc": "We guarantee employment with verified employers. We eliminate the risks of deportation and fines."
+        "title": "Candidate Support",
+        "desc": "We support candidates with arrival, registration, medical checks, and adaptation before work starts."
       }
     ]
   },
@@ -178,7 +189,7 @@
     "title1": "Leave a request —",
     "title2": "we will contact you",
     "subtitle": "Start a partnership or find a job in Belarus today",
-    "button": "Contact Us"
+    "button": "Apply on WhatsApp"
   },
   "footer": {
     "org": "LLC «INCOStechno». Legal labor migration services in the Republic of Belarus. Official partnership with foreign agencies.",
@@ -188,11 +199,12 @@
     "hoursTitle": "Working Hours:",
     "hours": "Daily from 09.00 to 18.00",
     "copyright": "All rights reserved.",
-    "privacy": "Privacy Policy"
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
   },
   "meta": {
-    "title": "BUDEYA | Legal Employment in Belarus for Nigeria (Lagos, Abuja)",
-    "description": "A reliable recruitment partner offering legal employment in Belarus for candidates from Nigeria. Full visa support from Lagos, Abuja, and Kano."
+    "title": "BUDEYA | Get a Legal Job in Belarus",
+    "description": "Legal employment support in Belarus for candidates from Nigeria, including work permit support, visa document assistance, and relocation coordination."
   },
   "breadcrumbs": {
     "home": "Home",

@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Countries({ dict }: { dict: any }) {
   return (
-    <section className="w-full bg-white py-16 border-t border-gray-100">
+    <section id="countries" className="w-full bg-white py-16 border-t border-gray-100 scroll-mt-28">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">{dict.countries.title}</h2>

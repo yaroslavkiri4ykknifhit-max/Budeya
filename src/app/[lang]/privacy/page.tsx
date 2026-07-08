@@ -3,16 +3,25 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { getDictionary } from '@/dictionaries';
 import { Metadata } from 'next';
+import { getStaticLanguageParams } from '@/lib/i18n';
+import { getLocalizedAlternates, getOpenGraphMetadata } from '@/lib/seo';
 
 export async function generateStaticParams() {
-  return [{ lang: 'en' }, { lang: 'bn' }, { lang: 'ur' }, { lang: 'si' }];
+  return getStaticLanguageParams();
 }
 
 export async function generateMetadata(
   { params }: { params: Promise<{ lang: string }> }
 ): Promise<Metadata> {
+  const { lang } = await params;
+  const title = "Privacy Policy | BUDEYA";
+  const description = "Privacy Policy for BUDEYA legal employment support in Belarus.";
+
   return {
-    title: "Privacy Policy | BUDEYA",
+    title,
+    description,
+    alternates: getLocalizedAlternates(lang, '/privacy'),
+    openGraph: getOpenGraphMetadata({ title, description, lang, path: '/privacy' }),
   };
 }
 

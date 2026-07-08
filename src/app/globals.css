@@ -19,6 +19,11 @@
 body {
   background: var(--background);
   color: var(--foreground);
+  overflow-x: hidden;
+}
+
+html {
+  overflow-x: hidden;
 }
 
 /* Base styles to remove dark mode inversion for this specific design which is mostly light */

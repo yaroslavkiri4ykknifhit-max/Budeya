@@ -3,7 +3,9 @@ import { MapPin, Clock } from 'lucide-react';
 import Link from 'next/link';
 
 export default function Footer({ dict, lang }: { dict: any, lang?: string }) {
+  const pageBase = lang ? `/${lang}` : '';
   const privacyLink = lang ? `/${lang}/privacy` : '/privacy';
+  const termsLink = lang ? `/${lang}/terms` : '/terms';
   
   return (
     <footer className="bg-white border-t border-gray-100 pt-16 pb-8">
@@ -27,9 +29,9 @@ export default function Footer({ dict, lang }: { dict: any, lang?: string }) {
           <div>
             <h3 className="font-bold text-gray-900 mb-6 uppercase tracking-wider text-sm">{dict.nav.services}</h3>
             <ul className="space-y-4">
-              <li><a href="#" className="text-gray-500 hover:text-primary transition-colors">{dict.services.b2b.title}</a></li>
-              <li><a href="#" className="text-gray-500 hover:text-primary transition-colors">{dict.services.b2c.title}</a></li>
-              <li><a href="#" className="text-gray-500 hover:text-primary transition-colors">{dict.nav.faq}</a></li>
+              <li><a href={`${pageBase}#services`} className="text-gray-500 hover:text-primary transition-colors">{dict.services.b2b.title}</a></li>
+              <li><a href={`${pageBase}#services`} className="text-gray-500 hover:text-primary transition-colors">{dict.services.b2c.title}</a></li>
+              <li><a href={`${pageBase}#faq`} className="text-gray-500 hover:text-primary transition-colors">{dict.nav.faq}</a></li>
             </ul>
           </div>
 
@@ -60,6 +62,7 @@ export default function Footer({ dict, lang }: { dict: any, lang?: string }) {
           </p>
           <div className="flex gap-4">
             <Link href={privacyLink} className="text-gray-500 hover:text-primary transition-colors text-sm">{dict.footer.privacy}</Link>
+            <Link href={termsLink} className="text-gray-500 hover:text-primary transition-colors text-sm">{dict.footer.terms}</Link>
           </div>
         </div>
       </div>

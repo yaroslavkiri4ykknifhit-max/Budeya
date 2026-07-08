@@ -3,7 +3,7 @@ import { Briefcase, Users, FileCheck, Building2, Plane, Scale } from 'lucide-rea
 
 export default function Services({ dict }: { dict: any }) {
   return (
-    <section className="w-full bg-light-gray py-24">
+    <section id="services" className="w-full bg-light-gray py-24 scroll-mt-28">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <span className="text-red-600 font-bold tracking-wider uppercase text-sm mb-2 block">-- {dict.nav.services}</span>

@@ -1,4 +1,4 @@
-import { Metadata, ResolvingMetadata } from 'next';
+import { Metadata } from 'next';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import Countries from '@/components/Countries';
@@ -11,31 +11,26 @@ import Footer from '@/components/Footer';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import StructuredData from '@/components/StructuredData';
 import { getDictionary } from '@/dictionaries';
+import { getStaticLanguageParams } from '@/lib/i18n';
+import { getLocalizedAlternates, getOpenGraphMetadata } from '@/lib/seo';
 
 export function generateStaticParams() {
-  return [{ lang: 'en' }, { lang: 'bn' }, { lang: 'ur' }, { lang: 'si' }];
+  return getStaticLanguageParams();
 }
 
 export async function generateMetadata(
-  { params }: { params: Promise<{ lang: string }> },
-  parent: ResolvingMetadata
+  { params }: { params: Promise<{ lang: string }> }
 ): Promise<Metadata> {
   const { lang } = await params;
   const dict = await getDictionary(lang);
+  const title = dict.meta?.title || "BUDEYA | Legal Employment in Belarus";
+  const description = dict.meta?.description || "A reliable partner for overseas recruitment agencies (B2B) and job seekers (B2C).";
 
   return {
-    title: dict.meta?.title || "BUDEYA | Legal Employment in Belarus",
-    description: dict.meta?.description || "A reliable partner for overseas recruitment agencies (B2B) and job seekers (B2C).",
-    alternates: {
-      canonical: `/${lang}`,
-      languages: {
-        'en': '/en',
-        'bn': '/bn',
-        'ur': '/ur',
-        'si': '/si',
-        'x-default': '/en',
-      },
-    },
+    title,
+    description,
+    alternates: getLocalizedAlternates(lang),
+    openGraph: getOpenGraphMetadata({ title, description, lang }),
   };
 }
 
@@ -49,13 +44,13 @@ export default async function LangHome({ params }: { params: Promise<{ lang: str
       <Breadcrumbs lang={lang} dict={dict} />
       <StructuredData lang={lang} dict={dict} />
       <main className="flex-grow">
-        <Hero dict={dict} />
+        <Hero dict={dict} language={lang} />
         <Countries dict={dict} />
         <Services dict={dict} />
         <Stages dict={dict} />
-        <About dict={dict} />
+        <About dict={dict} language={lang} />
         <FAQ dict={dict} />
-        <ContactBanner dict={dict} />
+        <ContactBanner dict={dict} currentLang={lang} />
       </main>
       <Footer dict={dict} lang={lang} />
     </div>

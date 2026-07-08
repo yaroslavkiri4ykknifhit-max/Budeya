@@ -1,11 +1,21 @@
 "use client";
 
 import React, { useState } from 'react';
-import { ChevronDown, Globe, Phone, Mail, Send, MessageCircle, MessageSquare } from 'lucide-react';
-import { useRouter, usePathname } from 'next/navigation';
+import { ChevronDown, Menu, Phone, Mail, MessageCircle, X } from 'lucide-react';
+import { getWhatsAppUrl, PHONE_NUMBER } from '@/lib/contact';
+import { trackPhoneClick, trackWhatsAppClick } from '@/lib/analytics';
 
 export default function Header({ dict, currentLang }: { dict: any, currentLang: string }) {
   const [isLangOpen, setIsLangOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const navItems = [
+    { label: dict.nav.advantages, href: `/${currentLang}#advantages` },
+    { label: dict.nav.countries, href: `/${currentLang}#countries` },
+    { label: dict.nav.services, href: `/${currentLang}#services` },
+    { label: dict.nav.faq, href: `/${currentLang}#faq` },
+    { label: dict.nav.contact, href: `/${currentLang}#contact` },
+  ];
 
   const changeLanguage = (lang: string) => {
     window.location.replace(`/${lang}`);
@@ -17,7 +27,11 @@ export default function Header({ dict, currentLang }: { dict: any, currentLang: 
       <div className="bg-gray-900 text-white text-xs py-2 w-full z-50 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-2">
           <div className="flex items-center justify-center gap-4 w-full sm:w-auto sm:justify-start">
-            <a href="tel:+375445480808" className="hover:text-primary transition-colors flex items-center gap-1 font-medium text-sm">
+            <a
+              href={`tel:${PHONE_NUMBER}`}
+              onClick={() => trackPhoneClick({ language: currentLang, placement: 'header_topbar' })}
+              className="hover:text-primary transition-colors flex items-center gap-1 font-medium text-sm"
+            >
               <Phone size={14} /> +375 44 548 08 08
             </a>
             <a href="mailto:Inkostehno@gmail.com" className="hover:text-primary transition-colors flex items-center gap-1 font-medium text-sm">
@@ -34,19 +48,20 @@ export default function Header({ dict, currentLang }: { dict: any, currentLang: 
               <img src="/logo.svg" alt="BUDEYA Logo" className="h-6 w-auto brightness-0 invert" />
             </div>
             <div>
-              <h1 className="font-bold text-xl leading-tight text-gray-900">{dict.hero.brand}</h1>
+              <div className="font-bold text-xl leading-tight text-gray-900">{dict.hero.brand}</div>
               <p className="text-xs text-gray-500 uppercase tracking-wider font-semibold">{dict.hero.agency}</p>
             </div>
           </div>
           
           <nav className="hidden md:flex items-center gap-8 font-bold text-sm text-gray-800">
-            <a href="#" className="hover:text-primary transition-colors flex items-center gap-1">{dict.nav.advantages}</a>
-            <a href="#" className="hover:text-primary transition-colors flex items-center gap-1">{dict.nav.countries}</a>
-            <a href="#" className="hover:text-primary transition-colors flex items-center gap-1">{dict.nav.services}</a>
-            <a href="#" className="hover:text-primary transition-colors flex items-center gap-1">{dict.nav.faq}</a>
+            {navItems.map((item) => (
+              <a key={item.href} href={item.href} className="hover:text-primary transition-colors flex items-center gap-1">
+                {item.label}
+              </a>
+            ))}
           </nav>
 
-          <div className="flex items-center gap-6">
+          <div className="flex items-center gap-3 sm:gap-6">
             <div className="relative">
               <button 
                 onClick={() => setIsLangOpen(!isLangOpen)}
@@ -78,11 +93,57 @@ export default function Header({ dict, currentLang }: { dict: any, currentLang: 
                 </div>
               )}
             </div>
-            <button className="hidden sm:block bg-primary text-white px-6 py-2.5 rounded-full text-sm font-bold hover:bg-primary-dark transition-colors shadow-lg shadow-primary/30">
+            <a
+              href={getWhatsAppUrl(currentLang)}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => trackWhatsAppClick({ language: currentLang, placement: 'header_cta' })}
+              className="hidden sm:flex bg-primary text-white px-6 py-2.5 rounded-full text-sm font-bold hover:bg-primary-dark transition-colors shadow-lg shadow-primary/30 items-center gap-2"
+            >
+              <MessageCircle size={16} />
               {dict.nav.requestCall}
+            </a>
+            <button
+              type="button"
+              aria-label={isMenuOpen ? 'Close navigation' : 'Open navigation'}
+              aria-expanded={isMenuOpen}
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="md:hidden w-11 h-11 rounded-full bg-gray-100 text-gray-900 flex items-center justify-center hover:bg-gray-200 transition-colors"
+            >
+              {isMenuOpen ? <X size={22} /> : <Menu size={22} />}
             </button>
           </div>
         </div>
+
+        {isMenuOpen && (
+          <div className="md:hidden border-t border-gray-100 bg-white shadow-lg">
+            <nav className="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-1 font-bold text-gray-900">
+              {navItems.map((item) => (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => setIsMenuOpen(false)}
+                  className="px-3 py-3 rounded-lg hover:bg-gray-50 hover:text-primary transition-colors"
+                >
+                  {item.label}
+                </a>
+              ))}
+              <a
+                href={getWhatsAppUrl(currentLang)}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => {
+                  setIsMenuOpen(false);
+                  trackWhatsAppClick({ language: currentLang, placement: 'header_mobile_cta' });
+                }}
+                className="mt-3 bg-primary text-white px-5 py-3.5 rounded-full text-sm font-bold hover:bg-primary-dark transition-colors shadow-lg shadow-primary/30 flex items-center justify-center gap-2"
+              >
+                <MessageCircle size={18} />
+                {dict.nav.requestCall}
+              </a>
+            </nav>
+          </div>
+        )}
       </header>
     </>
   );

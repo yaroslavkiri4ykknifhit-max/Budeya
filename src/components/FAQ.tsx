@@ -6,7 +6,7 @@ export default function FAQ({ dict }: { dict: any }) {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="w-full bg-white py-24">
+    <section id="faq" className="w-full bg-white py-24 scroll-mt-28">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">{dict.faq.title}</h2>

@@ -1,21 +1,22 @@
 import React from 'react';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, MessageCircle } from 'lucide-react';
+import WhatsAppLink from './WhatsAppLink';
 
-export default function About({ dict }: { dict: any }) {
+export default function About({ dict, language }: { dict: any, language: string }) {
   return (
-    <section className="w-full bg-light-gray py-24 pt-0">
+    <section id="advantages" className="w-full bg-light-gray py-24 pt-0 scroll-mt-28">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="flex flex-col lg:flex-row gap-16 items-center">
           <div className="flex-1 relative w-full aspect-square max-w-lg">
-            <div className="absolute inset-0 bg-gradient-to-tr from-primary to-primary-light rounded-[2.5rem] transform -rotate-3 scale-105 -z-10"></div>
+            <div className="hidden sm:block absolute inset-0 bg-gradient-to-tr from-primary to-primary-light rounded-[2.5rem] transform -rotate-3 scale-105 -z-10"></div>
             <img 
               src="/images/about.jpg" 
               alt="Team discussing" 
               className="w-full h-full object-cover rounded-[2.5rem] shadow-2xl relative z-10 border-4 border-white"
             />
             <div className="absolute -bottom-8 -right-8 bg-white p-6 rounded-2xl shadow-xl z-20 hidden md:block">
-              <div className="text-4xl font-bold text-primary mb-1">100%</div>
+              <div className="text-4xl font-bold text-primary mb-1">{dict.about.badgeTitle}</div>
               <div className="text-gray-600 font-medium">{dict.nav.advantages}</div>
             </div>
           </div>
@@ -45,10 +46,15 @@ export default function About({ dict }: { dict: any }) {
               ))}
             </div>
 
-            <button className="bg-gray-900 text-white px-8 py-4 rounded-full font-semibold hover:bg-primary transition-colors flex items-center gap-2 group">
+            <WhatsAppLink
+              language={language}
+              placement="about_cta"
+              className="inline-flex bg-gray-900 text-white px-8 py-4 rounded-full font-semibold hover:bg-primary transition-colors items-center gap-2 group"
+            >
+              <MessageCircle size={20} />
               {dict.about.button}
               <ArrowRight className="group-hover:translate-x-1 transition-transform" size={20} />
-            </button>
+            </WhatsAppLink>
           </div>
         </div>
       </div>
