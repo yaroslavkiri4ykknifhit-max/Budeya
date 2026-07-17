@@ -36,13 +36,13 @@ export default async function LangRootLayout({
           src="https://www.googletagmanager.com/gtag/js?id=AW-18329572887"
         />
         <Script id="google-tag-manager" strategy="afterInteractive">
-          {\`
+          {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
 
             gtag('config', 'AW-18329572887');
-          \`}
+          `}
         </Script>
       </head>
       <body className={inter.className}>{children}</body>
