@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { ChevronDown, Menu, Phone, Mail, MessageCircle, X } from 'lucide-react';
 import { getWhatsAppUrl, PHONE_NUMBER } from '@/lib/contact';
-import { trackPhoneClick, trackWhatsAppClick } from '@/lib/analytics';
+import { trackPhoneClick, trackWhatsAppClick, trackEmailClick } from '@/lib/analytics';
 
 export default function Header({ dict, currentLang }: { dict: any, currentLang: string }) {
   const [isLangOpen, setIsLangOpen] = useState(false);
@@ -34,7 +34,7 @@ export default function Header({ dict, currentLang }: { dict: any, currentLang: 
             >
               <Phone size={14} /> +375 44 548 08 08
             </a>
-            <a href="mailto:Inkostehno@gmail.com" className="hover:text-primary transition-colors flex items-center gap-1 font-medium text-sm">
+            <a href="mailto:Inkostehno@gmail.com" onClick={() => trackEmailClick({ language: currentLang, placement: 'header_topbar' })} className="hover:text-primary transition-colors flex items-center gap-1 font-medium text-sm">
               <Mail size={14} /> Inkostehno@gmail.com
             </a>
           </div>

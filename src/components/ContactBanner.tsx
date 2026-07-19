@@ -3,7 +3,7 @@
 import React from 'react';
 import { MessageCircle, Phone, Mail } from 'lucide-react';
 import { getWhatsAppUrl, PHONE_NUMBER, TELEGRAM_URL } from '@/lib/contact';
-import { trackPhoneClick, trackTelegramClick, trackWhatsAppClick } from '@/lib/analytics';
+import { trackPhoneClick, trackTelegramClick, trackWhatsAppClick, trackEmailClick } from '@/lib/analytics';
 
 export default function ContactBanner({ dict, currentLang }: { dict: any, currentLang: string }) {
   return (
@@ -46,7 +46,7 @@ export default function ContactBanner({ dict, currentLang }: { dict: any, curren
                 >
                   <Phone size={28} />
                 </a>
-                <a href="mailto:Inkostehno@gmail.com" title="Email" className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white text-gray-900 flex items-center justify-center hover:bg-gray-100 hover:scale-110 transition-all shadow-lg">
+                <a href="mailto:Inkostehno@gmail.com" title="Email" onClick={() => trackEmailClick({ language: currentLang, placement: 'contact_banner' })} className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white text-gray-900 flex items-center justify-center hover:bg-gray-100 hover:scale-110 transition-all shadow-lg">
                   <Mail size={28} />
                 </a>
                 <a
