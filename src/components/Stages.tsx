@@ -1,20 +1,21 @@
 import React from 'react';
-import { FileText, Users, UserCheck, FileSignature, MapPin, ShieldCheck } from 'lucide-react';
+import { Mail, ShieldCheck, FileSignature, Users, FileCheck, MapPin, Handshake } from 'lucide-react';
 
 export default function Stages({ dict }: { dict: any }) {
   if (!dict.stages) return null;
 
   const icons = [
-    <FileText size={48} className="text-blue-500" strokeWidth={1.5} />,
-    <Users size={48} className="text-blue-500" strokeWidth={1.5} />,
-    <UserCheck size={48} className="text-blue-500" strokeWidth={1.5} />,
+    <Mail size={48} className="text-blue-500" strokeWidth={1.5} />,
+    <ShieldCheck size={48} className="text-blue-500" strokeWidth={1.5} />,
     <FileSignature size={48} className="text-blue-500" strokeWidth={1.5} />,
+    <Users size={48} className="text-blue-500" strokeWidth={1.5} />,
+    <FileCheck size={48} className="text-blue-500" strokeWidth={1.5} />,
     <MapPin size={48} className="text-blue-500" strokeWidth={1.5} />,
-    <ShieldCheck size={48} className="text-blue-500" strokeWidth={1.5} />
+    <Handshake size={48} className="text-blue-500" strokeWidth={1.5} />
   ];
 
   return (
-    <section className="w-full bg-white py-24 border-t border-gray-100 relative overflow-hidden">
+    <section id="stages" className="w-full bg-white py-24 border-t border-gray-100 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         <div className="text-center mb-16 relative">
@@ -22,13 +23,11 @@ export default function Stages({ dict }: { dict: any }) {
             {dict.stages.title}
           </h2>
           <div className="w-32 h-1.5 bg-primary mx-auto rounded-full"></div>
-          {/* subtle line across */}
-          <div className="absolute top-1/2 left-0 w-full h-[1px] bg-gray-200 -z-10 hidden md:block"></div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-8">
+        <div className="flex flex-wrap justify-center gap-8">
           {dict.stages.steps.map((step: any, index: number) => (
-            <div key={index} className="flex flex-col items-center text-center group h-full">
+            <div key={index} className="flex flex-col items-center text-center group w-full sm:w-[45%] md:w-[30%] lg:w-[22%] min-w-[200px]">
               
               <div className="h-16 flex items-end justify-center mb-2">
                 <h3 className="font-bold text-gray-900 text-lg sm:text-base md:text-lg uppercase tracking-wider group-hover:text-primary transition-colors leading-tight">
@@ -46,7 +45,7 @@ export default function Stages({ dict }: { dict: any }) {
                 
                 {/* Icon */}
                 <div className="relative z-10 group-hover:-translate-y-2 transition-transform duration-300">
-                  {icons[index]}
+                  {icons[index % icons.length]}
                 </div>
               </div>
               

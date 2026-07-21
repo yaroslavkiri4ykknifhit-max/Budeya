@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react';
 import { MapPin, Clock } from 'lucide-react';
 import Link from 'next/link';
@@ -29,9 +31,18 @@ export default function Footer({ dict, lang }: { dict: any, lang?: string }) {
           <div>
             <h3 className="font-bold text-gray-900 mb-6 uppercase tracking-wider text-sm">{dict.nav.services}</h3>
             <ul className="space-y-4">
-              <li><a href={`${pageBase}#services`} className="text-gray-500 hover:text-primary transition-colors">{dict.services.b2b.title}</a></li>
-              <li><a href={`${pageBase}#services`} className="text-gray-500 hover:text-primary transition-colors">{dict.services.b2c.title}</a></li>
-              <li><a href={`${pageBase}#faq`} className="text-gray-500 hover:text-primary transition-colors">{dict.nav.faq}</a></li>
+              <li><a href={`${pageBase}#services`} className="text-gray-500 hover:text-primary transition-colors">{dict.footer.links?.agencies}</a></li>
+              <li><a href={`${pageBase}#stages`} className="text-gray-500 hover:text-primary transition-colors">{dict.footer.links?.process}</a></li>
+              <li><a href={`${pageBase}#countries`} className="text-gray-500 hover:text-primary transition-colors">{dict.footer.links?.requirements}</a></li>
+              <li><a href={`${pageBase}#job-seekers`} className="text-gray-500 hover:text-primary transition-colors">{dict.footer.links?.jobSeekers}</a></li>
+              <li>
+                <button 
+                  onClick={() => window.dispatchEvent(new Event('openVisitorModal'))}
+                  className="text-gray-500 hover:text-primary transition-colors text-left"
+                >
+                  {dict.footer.links?.changeType}
+                </button>
+              </li>
             </ul>
           </div>
 

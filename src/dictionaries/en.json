@@ -5,20 +5,47 @@
     "services": "Services",
     "faq": "FAQ",
     "contact": "Contact",
-    "requestCall": "Free Consultation"
+    "requestCall": "B2B Partnership"
   },
   "hero": {
     "agency": "Recruitment Agency",
     "brand": "«BUDEYA»",
-    "title": "Get a Legal Job in Belarus",
-    "desc": "BUDEYA helps foreign workers with legal employment in Belarus, work permit support, visa document assistance, and relocation coordination. The document process usually takes 30-40 days after the required documents are submitted.",
-    "button": "Apply Now — Free Consultation"
+    "badge": "B2B Recruitment Partnership",
+    "title": "Recruit Workers for Belarus Through an Official B2B Partnership",
+    "desc": "BUDEYA partners with licensed recruitment agencies in Nigeria, Pakistan, Bangladesh and Sri Lanka. We coordinate Belarusian employers, work invitations, visa documentation, arrival, accommodation and legal employment for candidates provided by our agency partners.",
+    "button": "Become a Recruitment Partner",
+    "button2": "View Partnership Process",
+    "b2bWarning": "For recruitment agencies only. Individual job applications are not accepted."
+  },
+  "visitorModal": {
+    "title": "Please select who you represent",
+    "desc": "BUDEYA works exclusively with licensed recruitment agencies and international staffing partners.",
+    "agencyBtn": "I represent a recruitment agency",
+    "jobSeekerBtn": "I am looking for a job",
+    "jobSeekerTitle": "Applications from individual job seekers are not accepted",
+    "jobSeekerDesc": "BUDEYA does not accept direct applications from individual candidates. To apply for employment in Belarus, please contact a licensed recruitment agency in your country. Your local agency can then contact BUDEYA and submit your documents as part of an official partnership.",
+    "understandBtn": "I understand"
+  },
+  "jobSeekerInfo": {
+    "title": "Are you an individual job seeker?",
+    "desc": "BUDEYA does not accept direct applications from individual candidates. Please contact a licensed recruitment agency in your country. The agency can verify your documents, represent you and submit your application to BUDEYA through an official B2B partnership.",
+    "button": "Find a licensed agency in your country",
+    "modalTitle": "Tips for Job Seekers",
+    "modalDesc": "When looking for a recruitment agency, we recommend to:",
+    "tips": [
+      "verify that the agency is officially registered;",
+      "request a written agreement;",
+      "request receipts for all payments;",
+      "do not send documents to unknown intermediaries;",
+      "confirm that the agency has an official partnership."
+    ],
+    "closeBtn": "Close"
   },
   "trust": {
     "items": [
       "Registered Belarusian company",
-      "Legal employment process",
-      "Work permit support",
+      "Legal B2B process",
+      "Employer coordination",
       "Visa document assistance",
       "Office in Belarus"
     ]
@@ -38,7 +65,8 @@
     }
   },
   "professions": {
-    "title": "In-Demand Professions",
+    "title": "Candidate Profiles Requested From Partner Agencies",
+    "desc": "Partner agencies may submit candidates for the following professions. Each candidate must meet the stated requirements and provide complete documentation.",
     "categories": [
       {
         "icon": "🧑‍🌾",
@@ -78,10 +106,10 @@
         ]
       }
     ],
-    "videoRequirement": "Video confirmation of skills is required for each specialty. Every worker must send a high-quality video demonstrating their work directly from their workplace or production site.",
+    "videoRequirement": "Partner agencies must provide a clear skills demonstration video for every candidate submitted for a skilled position.",
     "masseuse": {
       "title": "Masseuses (Spa & Wellness)",
-      "desc": "We are actively recruiting professional female masseuses for top-tier spas and wellness centers in Belarus. Candidates must provide video confirmation of their skills."
+      "desc": "We are actively recruiting professional female masseuses for top-tier spas and wellness centers in Belarus. Partner agencies must provide video confirmation of candidates' skills."
     },
     "languageRequirement": "English language proficiency is mandatory, Russian is desirable. Candidates with strong Russian language skills have the opportunity for employment as drivers, salespeople, and in all medical specialties."
   },
@@ -89,64 +117,60 @@
     "title": "Our Services",
     "desc": "Comprehensive legal and organizational support for labor migration to the Republic of Belarus.",
     "b2b": {
-      "title": "For Recruitment Agencies",
-      "subtitle": "(B2B Partnership)",
+      "title": "Services for Recruitment Agencies",
+      "subtitle": "Complete coordination between your agency, Belarusian employers and migration authorities.",
       "list": [
-        "Official cooperation agreement",
-        "Obtaining permits from Belarusian employers",
-        "Processing work invitations for your candidates",
-        "Assistance in obtaining work visas",
+        "Official B2B cooperation agreement",
+        "Verification of candidate documents",
+        "Coordination with Belarusian employers",
+        "Work permit and invitation processing",
+        "Visa documentation support",
         "Airport pickup and transfer",
-        "Accommodation arrangement and on-site coordination"
-      ]
-    },
-    "b2c": {
-      "title": "For Job Seekers",
-      "subtitle": "(Employment)",
-      "list": [
-        "Consultation on job selection and legal status",
-        "Assistance with document legalization (translation, apostille)",
-        "Processing of work permit (for 1 year, extendable)",
-        "Temporary residential registration",
-        "Assistance with medical examinations and obtaining a Tax ID",
-        "Protection of labor rights in the Republic of Belarus"
+        "Accommodation coordination",
+        "Registration and medical examination support",
+        "Legal employment coordination in Belarus",
+        "Ongoing communication with the partner agency"
       ]
     }
   },
   "stages": {
-    "title": "Stages of Employment",
+    "title": "Stages of B2B Cooperation",
     "steps": [
       {
-        "title": "APPLICATION",
-        "desc": "You submit an application, provide your passport and resume (work experience details)"
+        "title": "Partnership Request",
+        "desc": "The recruitment agency contacts BUDEYA and provides company information, country of operation and recruitment experience."
       },
       {
-        "title": "INTERVIEW",
-        "desc": "We conduct a video interview, assess your skills, and offer a vacancy with salary details"
+        "title": "Agency Verification",
+        "desc": "We verify the agency and discuss cooperation terms, candidate requirements and available positions."
       },
       {
-        "title": "PAPERWORK & VISA",
-        "desc": "We process an official work invitation and help you obtain a work visa in your country"
+        "title": "Cooperation Agreement",
+        "desc": "The parties sign an official B2B cooperation agreement."
       },
       {
-        "title": "ARRIVAL IN BELARUS",
-        "desc": "You arrive in Minsk. We meet you at the airport, arrange transfer, and check you into housing"
+        "title": "Candidate Submission",
+        "desc": "The partner agency submits candidate passports, CVs, skills videos and other required documents."
       },
       {
-        "title": "LEGALIZATION",
-        "desc": "We help you pass a medical exam, get temporary registration, and a 1-year work permit"
+        "title": "Documents and Visa Coordination",
+        "desc": "BUDEYA coordinates Belarusian employers, work invitations, permits and visa documentation."
       },
       {
-        "title": "WORK & SUPPORT",
-        "desc": "You start working. We stay in touch and protect your rights throughout the entire contract"
+        "title": "Arrival and Employment",
+        "desc": "We coordinate arrival, transfer, accommodation, registration and legal employment in Belarus."
+      },
+      {
+        "title": "Ongoing Partnership",
+        "desc": "BUDEYA remains in contact with the partner agency throughout the candidates’ employment period."
       }
     ]
   },
   "about": {
     "title": "Why Choose Us?",
-    "desc1": "We understand how important it is for partner agencies and job seekers to follow a clear, legal process. Our mission is to make relocation and employment support transparent, organized, and compliant with the laws of the Republic of Belarus for candidates from Nigeria, including Lagos and Abuja.",
+    "desc1": "We understand how important it is for partner agencies to follow a clear, legal process. Our mission is to make relocation and employment support transparent, organized, and compliant with the laws of the Republic of Belarus.",
     "desc2": "We handle all bureaucratic procedures with the Department of Citizenship and Migration in Belarus.",
-    "button": "Apply Now — Free Consultation",
+    "button": "Become a Recruitment Partner",
     "badgeTitle": "Legal",
     "features": [
       {
@@ -159,17 +183,33 @@
       },
       {
         "title": "Candidate Support",
-        "desc": "We support candidates with arrival, registration, medical checks, and adaptation before work starts."
+        "desc": "We coordinate candidates' arrival, registration, medical checks, and adaptation before work starts."
       }
     ]
   },
   "faq": {
     "title": "Frequently Asked Questions",
-    "subtitle": "Everything partners and candidates need to know.",
+    "subtitle": "Everything partners need to know.",
     "list": [
       {
-        "q": "Which professions are in highest demand?",
-        "a": "There is a high demand in Belarus for construction workers (masons, carpenters, concrete workers), agricultural workers, and manufacturing/warehouse staff."
+        "q": "Does BUDEYA work with individual job seekers?",
+        "a": "No. BUDEYA works exclusively with licensed recruitment agencies and staffing partners. Individual candidates should contact an official recruitment agency in their country."
+      },
+      {
+        "q": "Which countries can become BUDEYA partners?",
+        "a": "We currently cooperate with recruitment agencies from Nigeria, Pakistan, Bangladesh and Sri Lanka."
+      },
+      {
+        "q": "What information must an agency provide?",
+        "a": "The agency should provide its company name, registration information, country, contact details, recruitment experience and information about available candidates."
+      },
+      {
+        "q": "How are candidates submitted?",
+        "a": "Candidates are submitted by an approved partner agency after the cooperation terms have been agreed."
+      },
+      {
+        "q": "Can a candidate contact BUDEYA directly?",
+        "a": "Candidates may read the information on the website, but applications and documents must be submitted through an approved recruitment agency."
       },
       {
         "q": "Who pays for the candidate's flight?",
@@ -177,22 +217,24 @@
       },
       {
         "q": "Where will the workers live?",
-        "a": "Employers provide dormitories that meet all sanitary standards. We personally monitor the living conditions and help candidates adapt."
+        "a": "Employers provide dormitories that meet all sanitary standards. We monitor the living conditions and help candidates adapt."
       },
       {
         "q": "How fast is the work invitation processed?",
-        "a": "On average, the process of issuing a work permit and a special invitation takes 3 to 5 weeks from the moment the full package of documents is submitted."
+        "a": "On average, the process of issuing a work permit and a special invitation takes 3 to 5 weeks from the moment the partner agency submits the full package of documents."
       }
     ]
   },
   "contact": {
     "title1": "Leave a request —",
     "title2": "we will contact you",
-    "subtitle": "Start a partnership or find a job in Belarus today",
-    "button": "Apply on WhatsApp"
+    "subtitle": "Become an Official Recruitment Partner",
+    "desc": "Represent a licensed recruitment agency? Contact BUDEYA to discuss candidate requirements, available positions and cooperation terms.",
+    "button": "Discuss B2B Partnership on WhatsApp",
+    "warning": "Individual job applications are not accepted."
   },
   "footer": {
-    "org": "LLC «INCOStechno». Legal labor migration services in the Republic of Belarus. Official partnership with foreign agencies.",
+    "org": "Official B2B coordination of international recruitment and legal employment in the Republic of Belarus.",
     "contacts": "Contacts",
     "addressTitle": "Our Address",
     "address": "Republic of Belarus, 220118, Minsk, Shishkin st., 20/1-33",
@@ -200,11 +242,18 @@
     "hours": "Daily from 09.00 to 18.00",
     "copyright": "All rights reserved.",
     "privacy": "Privacy Policy",
-    "terms": "Terms of Service"
+    "terms": "Terms of Service",
+    "links": {
+      "agencies": "For Recruitment Agencies",
+      "process": "Partnership Process",
+      "requirements": "Candidate Requirements",
+      "jobSeekers": "Information for Job Seekers",
+      "changeType": "Change visitor type"
+    }
   },
   "meta": {
-    "title": "BUDEYA | Get a Legal Job in Belarus",
-    "description": "Legal employment support in Belarus for candidates from Nigeria, including work permit support, visa document assistance, and relocation coordination."
+    "title": "BUDEYA | B2B Recruitment Partnership for Employment in Belarus",
+    "description": "BUDEYA partners with licensed recruitment agencies from Nigeria, Pakistan, Bangladesh and Sri Lanka to coordinate legal employment of foreign workers in Belarus."
   },
   "breadcrumbs": {
     "home": "Home",
