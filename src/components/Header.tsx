@@ -10,11 +10,11 @@ export default function Header({ dict, currentLang }: { dict: any, currentLang: 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
-    { label: dict.nav.advantages, href: `/${currentLang}#advantages` },
-    { label: dict.nav.countries, href: `/${currentLang}#countries` },
-    { label: dict.nav.services, href: `/${currentLang}#services` },
-    { label: dict.nav.faq, href: `/${currentLang}#faq` },
-    { label: dict.nav.contact, href: `/${currentLang}#contact` },
+    { label: dict.nav.advantages, href: `#advantages` },
+    { label: dict.nav.countries, href: `#countries` },
+    { label: dict.nav.services, href: `#services` },
+    { label: dict.nav.faq, href: `#faq` },
+    { label: dict.nav.contact, href: `#contact` },
   ];
 
   const changeLanguage = (lang: string) => {
