@@ -17,13 +17,13 @@ export default function RootPage() {
       targetLang = 'en';
     }
 
-    window.location.replace(`/${targetLang}/`);
+    window.location.replace(`/${targetLang}`);
   }, []);
 
   return (
     <html lang="en">
       <head>
-        <meta httpEquiv="refresh" content="0;url=/en/" />
+        <meta httpEquiv="refresh" content="0;url=/en" />
         <title>BUDEYA | Legal Employment in Belarus</title>
         <script
           dangerouslySetInnerHTML={{
@@ -34,7 +34,7 @@ export default function RootPage() {
                 if (lang.indexOf('bn') === 0) target = 'bn';
                 else if (lang.indexOf('ur') === 0) target = 'ur';
                 else if (lang.indexOf('si') === 0) target = 'si';
-                window.location.replace('/' + target + '/');
+                window.location.replace('/' + target);
               })();
             `,
           }}
