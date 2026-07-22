@@ -4,12 +4,10 @@ import React, { useState } from 'react';
 import { ChevronDown, Menu, Phone, Mail, MessageCircle, X } from 'lucide-react';
 import { getWhatsAppUrl, PHONE_NUMBER } from '@/lib/contact';
 import { trackPhoneClick, trackWhatsAppClick, trackEmailClick } from '@/lib/analytics';
-import { useVisitorType } from '@/lib/useVisitorType';
 
 export default function Header({ dict, currentLang }: { dict: any, currentLang: string }) {
   const [isLangOpen, setIsLangOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { isJobSeeker } = useVisitorType();
 
   const navItems = [
     { label: dict.nav.advantages, href: `/${currentLang}#advantages` },
@@ -29,28 +27,16 @@ export default function Header({ dict, currentLang }: { dict: any, currentLang: 
       <div className="bg-gray-900 text-white text-xs py-2 w-full z-50 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-2">
           <div className="flex items-center justify-center gap-4 w-full sm:w-auto sm:justify-start">
-            {isJobSeeker ? (
-              <span className="opacity-40 cursor-not-allowed pointer-events-none flex items-center gap-1 font-medium text-sm select-none" title="Only for recruitment agencies">
-                <Phone size={14} /> +375 44 548 08 08
-              </span>
-            ) : (
-              <a
-                href={`tel:${PHONE_NUMBER}`}
-                onClick={() => trackPhoneClick({ language: currentLang, placement: 'header_topbar' })}
-                className="hover:text-primary transition-colors flex items-center gap-1 font-medium text-sm"
-              >
-                <Phone size={14} /> +375 44 548 08 08
-              </a>
-            )}
-            {isJobSeeker ? (
-              <span className="opacity-40 cursor-not-allowed pointer-events-none flex items-center gap-1 font-medium text-sm select-none" title="Only for recruitment agencies">
-                <Mail size={14} /> Inkostehno@gmail.com
-              </span>
-            ) : (
-              <a href="mailto:Inkostehno@gmail.com" onClick={() => trackEmailClick({ language: currentLang, placement: 'header_topbar' })} className="hover:text-primary transition-colors flex items-center gap-1 font-medium text-sm">
-                <Mail size={14} /> Inkostehno@gmail.com
-              </a>
-            )}
+            <a
+              href={`tel:${PHONE_NUMBER}`}
+              onClick={() => trackPhoneClick({ language: currentLang, placement: 'header_topbar' })}
+              className="hover:text-primary transition-colors flex items-center gap-1 font-medium text-sm"
+            >
+              <Phone size={14} /> +375 44 548 08 08
+            </a>
+            <a href="mailto:Inkostehno@gmail.com" onClick={() => trackEmailClick({ language: currentLang, placement: 'header_topbar' })} className="hover:text-primary transition-colors flex items-center gap-1 font-medium text-sm">
+              <Mail size={14} /> Inkostehno@gmail.com
+            </a>
           </div>
         </div>
       </div>
@@ -82,7 +68,7 @@ export default function Header({ dict, currentLang }: { dict: any, currentLang: 
                 className="flex items-center gap-1.5 text-sm font-bold text-gray-800 hover:text-primary bg-gray-100 px-3 py-1.5 rounded-md"
               >
                 <span className="text-base leading-none">
-                  {currentLang === 'bn' ? '🇧🇩' : currentLang === 'ur' ? '🇵🇰' : currentLang === 'si' ? '🇱🇰' : currentLang === 'ru' ? '🇷🇺' : '🇳🇬'}
+                  {currentLang === 'bn' ? '🇧🇩' : currentLang === 'ur' ? '🇵🇰' : currentLang === 'si' ? '🇱🇰' : '🇳🇬'}
                 </span>
                 <span className="uppercase">{currentLang}</span>
                 <ChevronDown size={14} />
@@ -107,26 +93,16 @@ export default function Header({ dict, currentLang }: { dict: any, currentLang: 
                 </div>
               )}
             </div>
-            {isJobSeeker ? (
-              <span
-                title="Only for recruitment agencies"
-                className="hidden sm:flex bg-primary/40 opacity-50 cursor-not-allowed pointer-events-none text-white px-6 py-2.5 rounded-full text-sm font-bold items-center gap-2 select-none"
-              >
-                <MessageCircle size={16} />
-                {dict.nav.requestCall}
-              </span>
-            ) : (
-              <a
-                href={getWhatsAppUrl(currentLang)}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => trackWhatsAppClick({ language: currentLang, placement: 'header_cta' })}
-                className="hidden sm:flex bg-primary text-white px-6 py-2.5 rounded-full text-sm font-bold hover:bg-primary-dark transition-colors shadow-lg shadow-primary/30 items-center gap-2"
-              >
-                <MessageCircle size={16} />
-                {dict.nav.requestCall}
-              </a>
-            )}
+            <a
+              href={getWhatsAppUrl(currentLang)}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => trackWhatsAppClick({ language: currentLang, placement: 'header_cta' })}
+              className="hidden sm:flex bg-primary text-white px-6 py-2.5 rounded-full text-sm font-bold hover:bg-primary-dark transition-colors shadow-lg shadow-primary/30 items-center gap-2"
+            >
+              <MessageCircle size={16} />
+              {dict.nav.requestCall}
+            </a>
             <button
               type="button"
               aria-label={isMenuOpen ? 'Close navigation' : 'Open navigation'}
@@ -152,29 +128,19 @@ export default function Header({ dict, currentLang }: { dict: any, currentLang: 
                   {item.label}
                 </a>
               ))}
-              {isJobSeeker ? (
-                <span
-                  title="Only for recruitment agencies"
-                  className="mt-3 bg-primary/40 opacity-50 cursor-not-allowed pointer-events-none text-white px-5 py-3.5 rounded-full text-sm font-bold flex items-center justify-center gap-2 select-none"
-                >
-                  <MessageCircle size={18} />
-                  {dict.nav.requestCall}
-                </span>
-              ) : (
-                <a
-                  href={getWhatsAppUrl(currentLang)}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={() => {
-                    setIsMenuOpen(false);
-                    trackWhatsAppClick({ language: currentLang, placement: 'header_mobile_cta' });
-                  }}
-                  className="mt-3 bg-primary text-white px-5 py-3.5 rounded-full text-sm font-bold hover:bg-primary-dark transition-colors shadow-lg shadow-primary/30 flex items-center justify-center gap-2"
-                >
-                  <MessageCircle size={18} />
-                  {dict.nav.requestCall}
-                </a>
-              )}
+              <a
+                href={getWhatsAppUrl(currentLang)}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => {
+                  setIsMenuOpen(false);
+                  trackWhatsAppClick({ language: currentLang, placement: 'header_mobile_cta' });
+                }}
+                className="mt-3 bg-primary text-white px-5 py-3.5 rounded-full text-sm font-bold hover:bg-primary-dark transition-colors shadow-lg shadow-primary/30 flex items-center justify-center gap-2"
+              >
+                <MessageCircle size={18} />
+                {dict.nav.requestCall}
+              </a>
             </nav>
           </div>
         )}
